@@ -1,28 +1,28 @@
 console.log('js');
 const employees = [{
-        FirstName: 'Leslie',
-        LastName: 'Knope',
+        firstName: 'Leslie',
+        lastName: 'Knope',
         employeeID: '1234',
-        employeeTitle: 'Deputy Directory',
+        employeeTitle: 'Deputy Director',
         annualSalary: '65,0000'
     },
     {
-        FirstName: 'Ron',
-        LastName: 'Swanson',
+        firstName: 'Ron',
+        lastName: 'Swanson',
         employeeID: '4567',
         employeeTitle: 'Director',
         annualSalary: '43,000'
     },
     {
-        FirstName: 'April',
-        LastName: 'Ludgate',
+        firstName: 'April',
+        lastName: 'Ludgate',
         employeeID: '6666',
         employeeTitle: 'Intern',
         annualSalary: '22,000'
     },
     {
-        FirstName: 'Ann',
-        LastName: 'Perkins',
+        firstName: 'Ann',
+        lastName: 'Perkins',
         employeeID: '7890',
         employeeTitle: 'Nurse',
         annualSalary: '0'
@@ -70,3 +70,18 @@ function addEmployee() {
 
 };
 
+
+function appendItemsToDom() {
+//eventually empty the inputs
+
+    for (let newEmployee of employees) {
+        $('tbody').append(`<tr><
+    <td>${newEmployee.firstName}</td>
+    <td>${newEmployee.lastName}</td>
+    <td>${newEmployee.employeeID}</td>
+    <td>${newEmployee.employeeTitle}</td>
+    <td>$${newEmployee.annualSalary}</td>
+    <td> <button class ="deleteBtn">Delete</button> </td></tr>
+    `)
+    }
+};
