@@ -31,6 +31,9 @@ const employees = [{
 
 ];
 
+console.log(employees);
+
+
 $(document).ready(readyNow);
 
 function readyNow() {
@@ -46,11 +49,16 @@ function readyNow() {
 
 function addEmployee() {
     console.log('click in addEmployee!');
-    let addEmployee = [{
+    let addEmployee = {
         firstName: $('#employee-firstname').val(),
         lastName: $('#employee-lastname').val(),
         employeeID: $('#employee-id').val(),
         employeeTitle: $('#employee-title').val(),
         annualSalary: $('#employee-annual-salary').val()
-    }];
-}
+    };
+
+    employees.push(addEmployee);
+    console.log('adding employees', employees);
+    
+
+};
