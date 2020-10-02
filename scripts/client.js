@@ -44,7 +44,13 @@ function readyNow() {
 
 }
 
-function addEmployee(){
-    console.log('click in addEmployee');
-    
+function addEmployee() {
+    console.log('click in addEmployee!');
+    let addEmployee = [{
+        firstName: $('#employee-firstname').val(),
+        lastName: $('#employee-lastname').val(),
+        employeeID: $('#employee-id').val(),
+        employeeTitle: $('#employee-title').val(),
+        annualSalary: $('#employee-annual-salary').val()
+    }];
 }
