@@ -48,6 +48,7 @@ function readyNow() {
 
 function deleteEmployee() {
     console.log('click in deleteEmployee');
+    $(this).closest('tbody').empty('');
 };
 
 
