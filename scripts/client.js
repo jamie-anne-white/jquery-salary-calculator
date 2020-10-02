@@ -48,8 +48,7 @@ function readyNow() {
 
 function deleteEmployee() {
     console.log('click in deleteEmployee');
-    $(this).closest('tbody').empty('');
-};
+    $(this).closest('tr').remove();};
 
 
 function addEmployee() {
