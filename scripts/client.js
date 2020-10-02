@@ -39,10 +39,10 @@ $(document).ready(readyNow);
 function readyNow() {
     console.log('jquery')
     //works!
-     //click event 
-     $('#submit-button').on('click', addEmployee);
-     
-     
+    //click event 
+    $('#submit-button').on('click', addEmployee);
+
+
 
 
 }
@@ -59,6 +59,21 @@ function addEmployee() {
 
     employees.push(addEmployee);
     console.log('adding employees', employees);
-    
 
 };
+
+function appendItemsToDom() {
+    $('tbody').empty();
+
+
+    for (let newEmployee of employees) {
+        $('tbody').append(`<tr><
+    <td>${newEmployee.firstName}</td>
+    <td>${newEmployee.lastName}</td>
+    <td>${newEmployee.employeeID}</td>
+    <td>${newEmployee.employeeTitle}</td>
+    <td>$${newEmployee.annualSalary}</td>
+    <td> <button class ="deleteBtn">Delete</button> </td></tr>
+    `)
+    }
+}
