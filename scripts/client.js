@@ -1,19 +1,19 @@
 console.log('js');
 const employees = [{
-        firstName: 'Leslie',
-        lastName: 'Knope',
-        employeeID: '1234',
-        employeeTitle: 'Deputy Director',
-        annualSalary: '65,0000'
-    },
-    {
-        firstName: 'Ron',
-        lastName: 'Swanson',
-        employeeID: '4567',
-        employeeTitle: 'Director',
-        annualSalary: '43,000'
-    },
-    {
+    //     firstName: 'Leslie',
+    //     lastName: 'Knope',
+    //     employeeID: '1234',
+    //     employeeTitle: 'Deputy Director',
+    //     annualSalary: '65,0000'
+    // },
+    
+    //     firstName: 'Ron',
+    //     lastName: 'Swanson',
+    //     employeeID: '4567',
+    //     employeeTitle: 'Director',
+    //     annualSalary: '43,000'
+    // },
+    // {
         firstName: 'April',
         lastName: 'Ludgate',
         employeeID: '6666',
@@ -41,11 +41,15 @@ function readyNow() {
     //works!
     //click event 
     $('#submit-button').on('click', addEmployee);
+    //delete button event
+    $('table').on('click', '.deleteBtn', deleteEmployee);
 
+};
 
+function deleteEmployee() {
+    console.log('click in deleteEmployee');
+};
 
-
-}
 
 function addEmployee() {
     console.log('click in addEmployee!');
