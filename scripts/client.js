@@ -60,20 +60,13 @@ function addEmployee() {
     employees.push(addEmployee);
     console.log('adding employees', employees);
 
+    appendItemsToDom();
+    $('#employee-firstname').val('');
+    $('#employee-lastname').val('');
+    $('#employee-id').val('');
+    $('#employee-title').val('');
+    $('#employee-annual-salary').val('');
+    
+
 };
 
-function appendItemsToDom() {
-    $('tbody').empty();
-
-
-    for (let newEmployee of employees) {
-        $('tbody').append(`<tr><
-    <td>${newEmployee.firstName}</td>
-    <td>${newEmployee.lastName}</td>
-    <td>${newEmployee.employeeID}</td>
-    <td>${newEmployee.employeeTitle}</td>
-    <td>$${newEmployee.annualSalary}</td>
-    <td> <button class ="deleteBtn">Delete</button> </td></tr>
-    `)
-    }
-}
