@@ -1,5 +1,5 @@
 console.log('js');
-const employees = [{
+const employees = [
     //     firstName: 'Leslie',
     //     lastName: 'Knope',
     //     employeeID: '1234',
@@ -14,22 +14,19 @@ const employees = [{
     //     annualSalary: '43,000'
     // },
     // {
-        firstName: 'April',
-        lastName: 'Ludgate',
-        employeeID: '6666',
-        employeeTitle: 'Intern',
-        annualSalary: '22,000'
-    },
-    {
-        firstName: 'Ann',
-        lastName: 'Perkins',
-        employeeID: '7890',
-        employeeTitle: 'Nurse',
-        annualSalary: '0'
-    }
-
-
-];
+    //     firstName: 'April',
+    //     lastName: 'Ludgate',
+    //     employeeID: '6666',
+    //     employeeTitle: 'Intern',
+    //     annualSalary: '22,000'
+    // },
+    // {
+    //     firstName: 'Ann',
+    //     lastName: 'Perkins',
+    //     employeeID: '7890',
+    //     employeeTitle: 'Nurse',
+    //     annualSalary: '0'
+    ];
 
 console.log(employees);
 
@@ -47,8 +44,11 @@ function readyNow() {
 };
 
 function deleteEmployee() {
-    console.log('click in deleteEmployee');
-    $(this).closest('tr').remove();};
+    console.log('click in deleteEmployee');   
+    $(this).closest('tr').remove();
+
+
+};
 
 
 function addEmployee() {
@@ -77,6 +77,8 @@ function addEmployee() {
 
 function appendItemsToDom() {
 //eventually empty the inputs
+$('tbody').empty();
+
 
     for (let newEmployee of employees) {
         $('tbody').append(`<tr><
