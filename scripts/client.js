@@ -91,4 +91,18 @@ $('tbody').empty();
     `)
     }
     
+    let totalSalaryCost = 0;
+        for (let i = 0; i < employees.length; i++) {
+            totalSalaryCost += employees[i].annualSalary / 12;
+            //console.log('in totalSalaryCost', totalSalaryCost);
+            $('#monthly-total').text(`${totalSalaryCost}`);
+
+            if (totalSalaryCost > 20000) {
+                $('#monthly-total').addClass('overBudget');
+            } else {
+                $('#monthly-total').removeClass('overBudget');
+            }
+
+
+        }
 };
